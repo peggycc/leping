@@ -1,0 +1,85 @@
+﻿body {
+	background-color: #f1f1f2;
+	font-family: 微軟正黑體;
+	text-align: center;
+	display:block;
+}
+h1 {
+	color: #147efb;
+	font-size: 45pt;
+	text-align: center;
+	font-weight:bold;
+	margin-top:100px;
+}
+label {
+	color: #58595b;
+	font-size: 1.2em;
+	font-weight:bold;
+}
+li{
+	display:block;
+	margin:5px;
+}
+ul{
+	padding:0px;
+	white-space: nowrap;
+}
+button {
+	background: #5fcaf8;
+	padding: 6px 30px;
+	line-height: 20px;
+	border-radius: 5px;
+	-webkit-box-shadow: #000000 0 0 px ;
+	-moz-box-shadow: #000000 0 0 1px ;
+	margin-top:10px;
+	box-shadow: #000000 0 0 1px ;
+	font-weight: bold;
+	font-size: 16px;
+}
+button:hover {
+	border-top-color: #28597a;
+	background: #28597a;
+	color: #ccc;
+}
+button:active {
+	border-top-color: #1b435e;
+	background: #1b435e;
+}
+
+
+
+a:link{
+	color: #365ebf;	
+	font-weight:bold;
+	line-height: 45px;
+	text-decoration: underline;
+	font-size:1.1em;
+}
+a:visited {
+	color: #365ebf;
+}
+a:hover{
+	color: #000000;
+}
+a:active{
+	color: #2B4B99;
+}
+#user_info{
+	background-color:white;
+	border-radius:3px;
+	padding-top:25px; 
+	box-shadow: 5px 5px 15px #b8b5b5; /*影子*/
+	margin-top:25px;
+	margin-bottom:60px;	
+}
+#footer {
+    width: 50%;
+	margin:0px auto;
+}
+
+.user_input{
+	border-radius:5px;
+	margin-right:0px;
+	width:180px;
+	border:#929497 1px solid; 
+}
