@@ -1,18 +1,17 @@
 ﻿body {
-	background-color: #f1f1f2;
+	background-color: #e8eded;
 	font-family: 微軟正黑體;
-	text-align: center;
 	display:block;
+
 }
 h1 {
-	color: #147efb;
-	font-size: 45pt;
-	text-align: center;
+	color: white;
+	font-size: 36pt;
+	text-align: right;
 	font-weight:bold;
-	margin-top:100px;
 }
 label {
-	color: #58595b;
+	color: #5a5a5a;
 	font-size: 1.2em;
 }
 li{
@@ -23,19 +22,7 @@ ul{
 	padding:0px;
 	white-space: nowrap;
 }
-button {
-	background: #5fcaf8;
-	padding: 6px 30px;
-	line-height: 20px;
-	border-radius: 5px;
-	-webkit-box-shadow: #000000 0 0 px ;
-	-moz-box-shadow: #000000 0 0 1px ;
-	margin-top:30px;
-	box-shadow: #000000 0 0 1px ;
-	font-weight: bold;
-	font-size: 16px;
 
-}
 button:hover {
 	border-top-color: #28597a;
 	background: #28597a;
@@ -47,19 +34,19 @@ button:active {
 }
 .user_input{
 	border-radius:5px;
-	margin-right:95px;
+	margin-right:70px;
 	width:180px;
 	border:#929497 1px solid; 
 }
 .input_sex{
 	height:24px;	
-	margin-right:135px;
+	margin-right:100px;
 }
 .input_city{
 	border-radius:5px;
 	border:#929497 1px solid; 
 	height:24px;
-	margin-right:150px;
+	margin-right:125px;
 	width:125px;
 }
 #user_info{
@@ -70,37 +57,54 @@ button:active {
 	margin-top:25px;
 	margin-bottom:140px;	
 }
-.label_title{
-	width:150px;
-	border-left-style:solid;
-	border-left-color:#fc3158;
-	border-width:7px;
-	text-align:left;
-	letter-spacing:1px;
-	margin-bottom:0px;
-	padding-left:15px;
-	left :20px;
-	float:left;
-}
+
 .label_box{
 	width:150px;
 	text-align:right;
 	letter-spacing:1px;
 	margin-bottom:0px;
 	float:left;
-	margin-left:10px;
-}
-.tan_pic{
-	width:4%;
-	margin:0px 7px 0px 12px;
-	float:left;
+	margin-left:50px;
 }
 
 #footer {
-    width: 50%;
-	margin:0px auto;
+	background-color:white;
+
+	position:absolute;
+	bottom:0;
+	padding:5px;
 }
 
+#top_box{
+	background: #147efb;
+	height:92px;
+	padding:10px 0px 10px 0px;
+}
 
+.icon_pic{
+	width:15%;
+	padding:20px 5px 0px 5px;
+	float:left;
+}
 
+.date_show{
+	font-weight:bold;
+	font-size:1.7em;
+	text-align: right;
+	
+}
 
+#wrapper {
+	min-height:100%;
+	position:relative;
+}
+
+#wait_box{
+	background-color:#c9c9c9;
+	padding:10px 10px 10px 30px ;
+	margin:50px 120px 0px 40px;
+}
+.wait_label{
+	font-size:16pt;
+	
+}

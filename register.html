@@ -1,11 +1,17 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>Register</title>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="register_main.css">
+<script src="./js/jquery.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+
+<script src="register.js"></script>
+<script src="get_area.js"></script>
 </head>
-<body>
+<body ng-app="">
 
 
 	<div class="col-lg-12 text-center">		
@@ -17,19 +23,19 @@
 					<label class="label_title">會員資料</label></br>
 				</li>
 				<li>
-					<label class="label_box">帳號(Email)</label>
+					<label class="label_box">帳號</label>
 					<img class="tan_pic" src="icon/tan.png">
-					<input class="user_input"></br>
+					<input id="user_id" class="user_input"></br>
 				</li>
 				<li>
 					<label class="label_box">密碼</label>
 					<img class="tan_pic" src="icon/tan.png">
-					<input class="user_input" placeholder="輸入8位以上的數字或字母"></br>
+					<input id="user_pw" class="user_input" placeholder="輸入8位以上的數字或字母"></br>
 				</li>
 				<li>
 					<label class="label_box">確認密碼</label>
 					<img class="tan_pic" src="icon/tan.png">
-					<input class="user_input" placeholder="再次輸入相同密碼"></br>
+					<input id="user_pw2" class="user_input" placeholder="再次輸入相同密碼"></br>
 				</li>
 				<li>
 					<label class="label_title">基本資料</label></br>
@@ -37,7 +43,7 @@
 				<li>
 					<label class="label_box">姓名</label>
 					<img class="tan_pic" src="icon/tan.png">
-					<input class="user_input"></br>
+					<input id="name" class="user_input"></br>
 				</li>
 				<li>
 					<label class="label_box">性別</label>
@@ -51,52 +57,35 @@
 					</div>					
 				</li>
 				<li>
+					<label class="label_box">email</label>
+					<img class="tan_pic" src="icon/tan.png">
+					<input id="user_email" class="user_input"></br>
+				</li>				
+				<li ng-controller="zip">
 					<label class="label_box">學校位置</label>
 					<img class="tan_pic" src="icon/tan.png">
-					<select id="city" name="city" class="input_city">
-						<option value="0">請選擇縣市</option>
-						<option value="基隆市">基隆市</option>
-						<option value="台北市">台北市</option>
-						<option value="新北市">新北市</option>
-						<option value="桃園市">桃園市</option>
-						<option value="新竹市">新竹市</option>
-						<option value="新竹縣">新竹縣</option>
-						<option value="苗栗縣">苗栗縣</option>
-						<option value="台中市">台中市</option>
-						<option value="彰化縣">彰化縣</option>
-						<option value="南投縣">南投縣</option>
-						<option value="雲林縣">雲林縣</option>
-						<option value="嘉義市">嘉義市</option>
-						<option value="嘉義縣">嘉義縣</option>
-						<option value="台南市">台南市</option>
-						<option value="高雄市">高雄市</option>
-						<option value="屏東縣">屏東縣</option>
-						<option value="台東縣">台東縣</option>	
-						<option value="花蓮縣">花蓮縣</option>						
-						<option value="宜蘭縣">宜蘭縣</option>						
-						<option value="澎湖縣">澎湖縣</option>
-						<option value="金門縣">金門縣</option>	
-						<option value="連江縣">連江縣</option>							
-					</select>					
-				</li>
-				<li>
-					<label class="label_box">學校地區</label>
-					<img class="tan_pic" src="icon/tan.png">
-					<select id="country" name="country" class="input_city">
-						<option value="0">請選擇鄉鎮市區</option>
-					</select>	
+					<select class="input_city" ng-model="SelCity" ng-options="City.name for City in Citys" ng-change="update(SelCity)">
+						<option value="">請選擇縣市</option>
+					</select>
+					<div style="margin-top:10px;">
+						<label class="label_box"">學校地區</label>
+						<img class="tan_pic" src="icon/tan.png">
+						<select class="input_city" ng-model="SelArea" ng-options="SelCity for  SelCity in level2" >
+							<option value="">請選擇鄉鎮市區</option>
+						</select>
+					</div>
 				</li>
 				<li>
 					<label class="label_box">學校名稱</label>
 					<img class="tan_pic" src="icon/tan.png">
-					<input class="user_input" placeholder="請輸入學校名稱"></br>
+					<input id="school_name" class="user_input" placeholder="請輸入學校名稱"></br>
 				</li>
 				<li>
 					<label class="label_box">指導老師</label>
 					<img class="tan_pic" src="icon/tan.png">
-					<input class="user_input"></br>
-				</li>	
-				<li><button>註冊</button></li>				
+					<input id="teacher_name" class="user_input"></br>
+				</li>						
+				<li><button id="send">註冊</button></li>				
 			</ul>
 		</div>
 		<div class="col-md-3"></div>
@@ -104,10 +93,7 @@
 	<div id="footer">
 		<img  id='footer' src="icon/copyright2015.png"  >					
 	</div> 
-	
-	
 		
-	
 </body>
 
 </html>
