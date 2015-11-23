@@ -8,12 +8,12 @@
 	$user_gender=$_POST['gender'];
 	$user_email=$_POST['email'];
  	$school_city=$_POST['city']; 
+ 	$school_area=$_POST['area']; 	
 	$school_name=$_POST['school'];
 	$user_supervisor=$_POST['supervisor'];
 	
-	$sql = "INSERT INTO `login_info`(`user_id`,`user_pw`,`gender`,`email`,`city`,`school`,`supervisor`) 
-		VALUES ('".$user_id."','".$user_pw."','".$user_gender."','".$user_email."','".$school_city."',
-		'".$school_name."','".$user_supervisor."');";
+	$sql = "INSERT INTO `login_info`(`user_id`,`user_pw`,`gender`,`email`,`city`,`area`,`school`,`supervisor`) 
+		VALUES ('".$user_id."','".$user_pw."','".$user_gender."','".$user_email."','".$school_city."', '".$school_area."', '".$school_name."','".$user_supervisor."');";
 	mysql_query($sql, $link) or die('MySQL query error');
 	echo "成功";
 ?>

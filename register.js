@@ -1,6 +1,4 @@
 
-
-
 $(function(){
 	$("#send").click(function(){
 		if($('#male').is(':checked')){
@@ -11,7 +9,7 @@ $(function(){
 			var sex="";
 		}
 		
-		if($('#user_id').val()!=""&&$('#user_id').val()!=""&&$('#user_pw').val()&&sex!=""&&$("#user_email").val()!=""&&$("#city").val()!=""&&$("#school_name").val()!=""&&$("#teacher_name").val()!=""){
+		if($('#user_id').val()!="" && $('#user_id').val()!="" && $('#user_pw').val() && sex!=""&&$("#user_email").val()!="" && $("#city").val()!="" && $("#school_name").val()!="" && $("#teacher_name").val()!=""){
 			$.ajax( {
 				url: 'login_data.php',
 				type: 'POST',
@@ -21,6 +19,7 @@ $(function(){
 				gender:sex,
 				email:$("#user_email").val(),
  				city:$("#city").val(),
+				area:$("#area").val(),
 				school:$("#school_name").val(),
 				supervisor:$("#teacher_name").val()
 				},

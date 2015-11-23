@@ -64,13 +64,13 @@
 				<li ng-controller="zip">
 					<label class="label_box">學校位置</label>
 					<img class="tan_pic" src="icon/tan.png">
-					<select class="input_city" ng-model="SelCity" ng-options="City.name for City in Citys" ng-change="update(SelCity)">
+					<select id="city" class="input_city" ng-model="SelCity" ng-options="City.name for City in Citys" ng-change="update(SelCity)">
 						<option value="">請選擇縣市</option>
 					</select>
 					<div style="margin-top:10px;">
 						<label class="label_box"">學校地區</label>
 						<img class="tan_pic" src="icon/tan.png">
-						<select class="input_city" ng-model="SelArea" ng-options="SelCity for  SelCity in level2" >
+						<select id="area" class="input_city" ng-model="SelArea" ng-options="SelCity for SelCity in level2" >
 							<option value="">請選擇鄉鎮市區</option>
 						</select>
 					</div>
