@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="beginner_edit.css">
+
+</head>
+<body >
+
+<!-- header -->
+	<div class="col-md-2 text-center" id="top_box">		
+		<h1 style="margin-top:10px;">
+			<a href="home.html" title="回首頁">樂評網</a>
+		</h1>
+	</div>
+	<div class="col-md-5" id="top_box"></div>				
+	<div class="col-md-2 date_show" id="top_box" style="padding:30px;">
+	<SCRIPT LANGUAGE="JavaScript"> /*程式會顯示你進入這一頁的時間*/
+			RightNow = new Date();
+			document.write( RightNow.getFullYear()+ "/" + (RightNow.getMonth()+1) + "/" + RightNow.getDate() ) 
+	</SCRIPT> 
+	</div>	
+	<div class="col-md-3 " id="top_box">	
+		<img class="icon_pic" src="icon/calendar.png">
+		<img class="icon_pic" src="icon/join.png">
+		<img class="icon_pic" src="icon/beginner.png">
+		<img class="icon_pic" src="icon/pin.png">
+		<img style="padding-top:23px;" class="icon_pic" src="icon/mailbox.png">
+		<img class="icon_pic" src="icon/user.png">
+
+
+	</div>
+<!-- 建立任務區 -->
+	<div class="col-md-1 "></div>		
+	<div class="col-md-11 ">
+		<p style="font-size:23pt; font-weight:bold; padding:20px 20px 0px 20px;" >
+			建立任務
+		</p>
+		<p class="input_date">任務名稱</p>
+		<input id="table_name" class="user_input" placeholder="未命名任務"></br>
+		<label for="bookdate" class="input_date">
+			開始日期
+		</label>
+		<input type="date" id="bookdate" placeholder="2015-12-11">
+		<label for="bookdate" class="input_date">
+			截止日期
+		</label>
+		<input type="date" id="bookdate" placeholder="2015-12-11">
+		<p style="font-size:17pt; padding:20px 20px 0px 20px;">
+			任務詳細資料
+		</p>
+		<p class="input_date">說明</p>
+		<TextArea class="user_input" Cols="1" Rows="5" ></TextArea>
+	</div>	
+	
+<!-- 按鈕1 -->
+	<div class="col-md-6 ">	
+<!-- 		<a href="______.html"> -->
+			<button class="button_S">
+				<li>儲存</li>
+			</button>
+		</a>	
+	</div>
+	
+<!-- 按鈕2 -->
+	<div class="col-md-6 ">	
+<!-- 		<a href="______.html"> -->
+			<button class="button_L">
+				<li>捨棄</li>
+			</button>
+		</a>	
+	</div>	
+	
+<!-- footer -->	
+	<div class="col-md-12 text-center" id="footer">
+		<img src="icon/logo.png" width="8%" >	
+	</div> 
+	
+	
+	
+	
+
+
+	
+</body>
+
+</html>
